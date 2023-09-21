@@ -1,0 +1,12 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A map of Japan",
+    "data": {
+      "url": "", 
+      "format": {"type": "topojson", "feature": ""}
+    },
+    "projection": {"type": "mercator"},
+    "mark": {"type": "geoshape", "fill": "#ccc", "stroke": "#fff"},
+    "encoding": {}
+  }
+  
