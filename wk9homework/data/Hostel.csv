@@ -31,7 +31,7 @@
 "37","Bonfire Hostel Osaka","Osaka",1800,"9.5km from city centre",9.2,"Superb",7.6,9.6,10,8,9.6,10,9.6,135.506891,34.621308
 "39","Book and Bed Tokyo - Kyoto","Kyoto",3800,"0.9km from city centre",9.1,"Superb",9,10,8.5,9.5,8.5,10,8,135.7727965,35.0041178
 "40","Book And Bed Tokyo Asakusa","Tokyo",4100,"9.6km from city centre",9.1,"Superb",8.7,9.7,8.6,9.4,9.5,9.3,8.6,139.7949806,35.7107965
-"41","Book And Bed Tokyo Fukuoka","Fukuoka-City",4300,"0.3km from city centre",8.6,"Fabulous",8,10,6,10,8,10,8,130.3979662,33.5909933
+"41","Book And Bed Tokyo Fukuoka","Fukuoka",4300,"0.3km from city centre",8.6,"Fabulous",8,10,6,10,8,10,8,130.3979662,33.5909933
 "42","Book And Bed Tokyo Ikebukuro","Tokyo",4100,"4.9km from city centre",8.2,"Fabulous",8.9,8,8,9.1,7.7,8.6,7.4,139.7085388,35.7310808
 "43","Bunka Hostel Tokyo","Tokyo",2200,"9.5km from city centre",9.3,"Superb",8.8,9.3,9.3,9.5,9.4,9.8,9.2,139.79322,35.712108
 "47","Capsule Hotel Asahi Plaza Shinsaibashi","Osaka",3000,"4km from city centre",9.9,"Superb",10,10,10,10,10,10,9,135.497847,34.6707858
@@ -45,7 +45,7 @@
 "56","CITAN Hostel","Tokyo",2500,"8.1km from city centre",9.4,"Superb",9.3,9.8,9.5,9.1,9.5,9.6,9.3,139.781352,35.691571
 "57","Coco Hostel Osaka","Osaka",2100,"4.7km from city centre",8.5,"Fabulous",7.2,9.2,8,9.8,8.2,8.8,8.2,135.508221,34.6644243
 "59","Comics & CapsuleHotel COMICAP kyotoshinkyogoku","Kyoto",2000,"0.7km from city centre",9.6,"Superb",9.1,9.8,9.8,9.8,9.4,9.3,9.7,135.7676061,35.0053862
-"60","Common de Hostel & Bar","Fukuoka-City",2500,"0.8km from city centre",9.9,"Superb",10,10,10,9,10,10,10,130.4032209,33.5978245
+"60","Common de Hostel & Bar","Fukuoka",2500,"0.8km from city centre",9.9,"Superb",10,10,10,9,10,10,10,130.4032209,33.5978245
 "61","Daikoku Hostel","Osaka",2800,"5.8km from city centre",8,"Fabulous",6,8,8,8,9,9,8,135.4971528,34.6550004
 "62","Dotombori Base","Osaka",2500,"4.3km from city centre",8.7,"Fabulous",8.6,8.3,7.7,9.7,8.6,9.4,8.9,135.5052683,34.6678045
 "63","Downtown Inn Kyoto","Kyoto",1000,"1.4km from city centre",9.3,"Superb",8.9,9.7,9.7,9.1,9.1,8.6,9.7,135.755182,35.0052769
@@ -56,8 +56,8 @@
 "68","Ezstay Osaka","Osaka",2000,"4.6km from city centre",3.1,"Rating",2,2,2,4,6,2,4,135.535271,34.6757318
 "70","Family & bAKpAK Tokyo Hostel","Tokyo",1800,"9.8km from city centre",7.4,"Very Good",6.5,6.5,7.5,7.5,8.5,6.5,9,139.79148,35.72369
 "71","Friends Kyo","Kyoto",2200,"1.2km from city centre",10,"Superb",10,10,10,10,10,10,10,135.7718,35.001371
-"73","Fukuoka Backpackers Hostel","Fukuoka-City",2300,"2.5km from city centre",8.3,"Fabulous",7.5,8.6,8,8.2,8.8,8.9,8.1,130.428142,33.584119
-"74","Fukuoka Hana Hostel","Fukuoka-City",2500,"0.8km from city centre",9,"Superb",8.3,9.2,8.8,9.5,9,9.3,9,130.4097719,33.5926482
+"73","Fukuoka Backpackers Hostel","Fukuoka",2300,"2.5km from city centre",8.3,"Fabulous",7.5,8.6,8,8.2,8.8,8.9,8.1,130.428142,33.584119
+"74","Fukuoka Hana Hostel","Fukuoka",2500,"0.8km from city centre",9,"Superb",8.3,9.2,8.8,9.5,9,9.3,9,130.4097719,33.5926482
 "75","Funtoco Backpackers Namba","Osaka",2300,"5.5km from city centre",9.3,"Superb",8.9,9.6,9,9,9.5,10,9.4,135.503623,34.656784
 "76","Gion Ryokan Q-beh","Kyoto",2800,"1.5km from city centre",9.5,"Superb",9,9.8,9.5,9.8,9.3,9.5,9.6,135.7795363,35.0014418
 "77","Goen Lounge＆Stay","Osaka",2000,"18.2km from city centre",8.9,"Fabulous",8,10,10,6,8,10,10,135.6505111,34.815565
@@ -74,7 +74,7 @@
 "88","Guest House Ga-Jyun","Kyoto",2000,"1.4km from city centre",9.6,"Superb",9.6,9.7,9.4,9.4,9.4,9.9,9.9,135.7833531,35.009131
 "89","Guest House Hachi","Kyoto",3200,"3.2km from city centre",10,"Superb",10,10,10,10,10,10,10,135.7435285,34.9915805
 "90","Guest House Hitsuji-An","Kyoto",2200,"1.3km from city centre",9.8,"Superb",9.5,10,9.5,10,10,10,9.5,135.75435,35.009679
-"92","Guest House Kaine","Fukuoka-City",2500,"0.7km from city centre",8.9,"Fabulous",10,9,8.5,9,7.5,10,8.5,130.403731,33.596604
+"92","Guest House Kaine","Fukuoka",2500,"0.7km from city centre",8.9,"Fabulous",10,9,8.5,9,7.5,10,8.5,130.403731,33.596604
 "93","Guest House Kyoto Inn","Kyoto",1500,"3.3km from city centre",8.9,"Fabulous",8.7,9.4,9,8.1,8.6,9.4,8.9,135.743165,34.990043
 "94","Guest House La Kongo","Osaka",2500,"4.2km from city centre",7.8,"Very Good",6,8,7.5,9,8,8.5,7.5,135.5078668,34.6687802
 "95","Guest House Matsu","Osaka",1900,"7.4km from city centre",9.3,"Superb",9,9.7,9.2,8.7,9.3,9.7,9.5,135.495148,34.640747
@@ -98,9 +98,9 @@
 "115","Guesthouse Shitamachi-Kujo","Kyoto",1900,"3.9km from city centre",9.1,"Superb",10,10,8,8,10,10,8,135.762166,34.977079
 "116","Guesthouse Soi","Kyoto",1700,"2.4km from city centre",9.5,"Superb",9.4,9.6,9.6,8.8,9.4,9.8,9.8,135.7776103,34.9917216
 "117","Guesthouse U-En","Osaka",2300,"1.9km from city centre",9.5,"Superb",9.3,9.6,9.3,9.4,9.4,9.8,9.5,135.4865055,34.6946473
-"118","Harborside Guest House MINATO","Fukuoka-City",2500,"1.5km from city centre",8.4,"Fabulous",7.5,9,8.5,7,9.5,9,8.5,130.406397,33.603186
+"118","Harborside Guest House MINATO","Fukuoka",2500,"1.5km from city centre",8.4,"Fabulous",7.5,9,8.5,7,9.5,9,8.5,130.406397,33.603186
 "119","HARUYA Hostels Aqua","Kyoto",1500,"3.1km from city centre",9,"Superb",9,9,9,9,9,9,9,135.748695,34.988516
-"120","HATAGO tenjin","Fukuoka-City",2300,"0.6km from city centre",8.4,"Fabulous",8.7,8.7,8.7,10,7.3,7.3,8,130.3976545,33.5946282
+"120","HATAGO tenjin","Fukuoka",2300,"0.6km from city centre",8.4,"Fabulous",8.7,8.7,8.7,10,7.3,7.3,8,130.3976545,33.5946282
 "121","Hikari House","Tokyo",4000,"1.4km from city centre",7.6,"Very Good",6.3,8,6.8,9.4,6.9,8.6,7.6,139.7019965,35.6991367
 "122","Hiromas Hostel in Akiba","Tokyo",2700,"7.3km from city centre",9.2,"Superb",8.7,9.6,9.2,9.1,9.1,9.4,9.6,139.7702062,35.704546
 "123","Hiromas Hostel in Kanda","Tokyo",2000,"7.6km from city centre",9.3,"Superb",8.4,9.8,9.5,9.1,9.2,9.4,9.3,139.7763124,35.6928219
@@ -121,7 +121,6 @@
 "141","Hostel Ginkakuji","Kyoto",1300,"2.7km from city centre",4.9,"Rating",2,10,6,6,2,2,6,135.791229,35.027017
 "143","Hostel HARUYA Kyoto","Kyoto",1500,"1km from city centre",9.6,"Superb",8,10,10,10,10,10,9,135.778964,35.008755
 "144","HOSTEL HYAKU","Osaka",2700,"4.4km from city centre",9.5,"Superb",8.9,10,9.4,9.3,9.7,9.7,9.5,135.5109784,34.6676664
-"145","Hostel J Culture 168","Osaka",3000,"5.3km from city centre",7.5,"Very Good",6.7,7.3,8.7,7.3,8,9.3,5.3,138.252924,36.204824
 "146","Hostel Jin","Osaka",2500,"4.3km from city centre",9.6,"Superb",8.8,10,9.8,8.8,9.8,9.8,10,135.4661493,34.6810161
 "147","Hostel Kyoto Kizuna","Kyoto",1800,"2.1km from city centre",9.4,"Superb",8.6,9.9,9.5,9.2,9.6,9.6,9.6,135.7626527,34.9936138
 "148","Hostel LnK (Lodging & Kin)","Osaka",3300,"5.6km from city centre",9.5,"Superb",9.2,10,9.3,9.5,9.3,9.5,9.5,135.502521,34.656382
@@ -178,7 +177,7 @@
 "208","Khaosan World Namba","Osaka",2100,"4.5km from city centre",8.5,"Fabulous",7.4,8.4,8.4,9.1,8.9,9,8.4,135.49717,34.666165
 "209","Khaosan World Ryogoku Hostel","Tokyo",2300,"9.5km from city centre",9,"Superb",8.2,9.1,8.9,9.6,9.1,9.3,8.4,139.7967617,35.6943259
 "210","Khaosan World Tennoji Hostel","Osaka",2300,"6.6km from city centre",9,"Superb",8.3,9.7,9.7,9.3,8.7,9.3,8,135.5183093,34.64884
-"211","Kia Ora Budgetstay","Fukuoka-City",2600,"2km from city centre",9,"Superb",8,8.8,8.8,9.2,9.3,9.8,8.8,130.4225942,33.5951129
+"211","Kia Ora Budgetstay","Fukuoka",2600,"2km from city centre",9,"Superb",8,8.8,8.8,9.2,9.3,9.8,8.8,130.4225942,33.5951129
 "212","Kintetsu Friendly Hostel -Osaka Tennoji Park-","Osaka",2000,"6.5km from city centre",9,"Superb",7.8,9.5,9.1,9.4,9.3,9.1,9,135.5122677,34.6485086
 "215","Kyoto Be Open Hostel","Kyoto",3400,"3.8km from city centre",9,"Superb",8.7,9.3,8.7,9.3,8.7,9.3,9.3,135.764191,34.977498
 "216","Kyoto Guesthouse Roujiya","Kyoto",3500,"2.1km from city centre",8.1,"Fabulous",7.8,9,7.4,8,8.6,8.8,7.4,135.74531,35.009207
@@ -191,14 +190,14 @@
 "224","Len Kyoto","Kyoto",2500,"1.4km from city centre",9.6,"Superb",9.6,9.6,9.7,9.7,9.6,9.8,9.5,135.7673713,34.998732
 "226","Lore Hostel Dontonbori","Osaka",2000,"4.3km from city centre",8.5,"Fabulous",7.1,7.7,8.6,9.7,9.1,8.6,8.9,135.503853,34.667931
 "228","Lyuro Tokyo Kiyosumi -The Share Hotels-","Tokyo",3200,"9.1km from city centre",9.4,"Superb",9.3,10,10,7.3,10,9.3,10,139.7920658,35.6812172
-"229","montan HAKATA","Fukuoka-City",3000,"2.4km from city centre",9.4,"Superb",9.3,9.8,9.7,8.8,9.5,9.5,9.5,130.427977,33.588725
+"229","montan HAKATA","Fukuoka",3000,"2.4km from city centre",9.4,"Superb",9.3,9.8,9.7,8.8,9.5,9.5,9.5,130.427977,33.588725
 "230","Mosaic Hostel Kyoto","Kyoto",2500,"3.7km from city centre",9.6,"Superb",9.5,9.7,9.7,9.3,9.7,9.7,9.5,135.7552361,34.9803659
 "232","Music Uni Street Backpackers Hostel","Osaka",3000,"6km from city centre",8.9,"Fabulous",9,9,9,8,8,10,9,135.4673702,34.7519746
 "233","MyCUBE by MYSTAYS Asakusa-Kuramae","Tokyo",3200,"9.2km from city centre",8.8,"Fabulous",8,9.5,9,8,9,9,9,139.7920033,35.7037857
 "234","Nadeshiko Hotel Shibuya (Female Only)","Tokyo",5500,"3.8km from city centre",9.2,"Superb",8.7,9.7,9.7,8.7,9.7,9.3,8.7,139.692988,35.6550972
 "235","Nagomi-Ryokan Yuu","Kyoto",3100,"2.2km from city centre",5.1,"Rating",6,6,2,8,6,2,6,135.755793,34.99419
 "236","Nihonbashi Muromachi BAY HOTEL","Tokyo",4000,"7.6km from city centre",9.2,"Superb",9,9.7,8.7,8.3,10,9.3,9.3,139.7756795,35.6872974
-"237","Norishico Auto Guesthouse","Fukuoka-City",2800,"16.1km from city centre",10,"Superb",10,10,10,10,10,10,10,130.528032,33.49096
+"237","Norishico Auto Guesthouse","Fukuoka",2800,"16.1km from city centre",10,"Superb",10,10,10,10,10,10,10,130.528032,33.49096
 "238","Nui. Hostel & Bar Lounge","Tokyo",2500,"9.3km from city centre",9.3,"Superb",9.5,9.6,9.4,8.6,9.3,9.6,9.4,139.7933951,35.7038859
 "239","O-yado Sato","Kyoto",3900,"2.3km from city centre",9.1,"Superb",9,10,9,8,10,9,9,135.75571,34.994214
 "240","Oak Hostel Zen","Tokyo",2200,"8.8km from city centre",9,"Superb",8.2,8.9,8.9,9.1,9.6,9.3,8.9,139.7809311,35.7219034
@@ -238,7 +237,6 @@
 "275","R.Star Hostel Kyoto","Kyoto",2400,"1.8km from city centre",9.6,"Superb",8.7,10,9.7,9.3,9.8,9.9,9.8,135.758374,34.997989
 "276","Retrometro Backpackers","Tokyo",3000,"9.2km from city centre",9.4,"Superb",9.4,9.4,9,9.4,9.5,9.8,9.6,139.7893615,35.7131573
 "279","RYOKAN＆HOSTEL WASABI Nippori","Tokyo",2000,"9.1km from city centre",8.7,"Fabulous",8.2,8.6,8.9,8.5,8.8,8.9,8.9,139.777723,35.732782
-"281","Sakura Guest House","Osaka",2700,"4.3km from city centre",4.9,"Rating",4,4,4,8,4,6,4,137.2414859,36.135716
 "282","Sakura Hostel Asakusa","Tokyo",2400,"9.8km from city centre",8.6,"Fabulous",7.7,8.6,8.4,8.9,9,9,8.7,139.7948263,35.7160224
 "283","Sakura Hotel Ikebukuro","Tokyo",2300,"5.1km from city centre",8.3,"Fabulous",7.3,8.2,7.9,9,7.8,9.1,8.8,139.7088026,35.7336139
 "284","Sakura Hotel Nippori","Tokyo",1900,"7.8km from city centre",9.1,"Superb",8.6,9.4,8.9,9.1,9.7,9.4,8.6,139.764175,35.7281692
@@ -257,13 +255,13 @@
 "297","Stayto (former: Oak Hotel)","Tokyo",2500,"8.7km from city centre",9,"Superb",8.3,9.1,8.5,9.2,9.4,9.5,8.8,139.78462,35.711382
 "298","Suzuki Guesthouse","Kyoto",1600,"2.2km from city centre",9.1,"Superb",8.6,9.6,8.7,8.4,9.8,9.6,8.9,135.7451539,35.0176229
 "299","Tabetoma Nijo Castle","Kyoto",1500,"1.3km from city centre",8.8,"Fabulous",8.5,9.3,8.6,8.9,9,9,8.7,135.748218,35.0142299
-"300","Tabicolle Backpackers","Fukuoka-City",2500,"2.3km from city centre",10,"Superb",10,10,10,10,10,10,10,130.4248084,33.5821253
+"300","Tabicolle Backpackers","Fukuoka",2500,"2.3km from city centre",10,"Superb",10,10,10,10,10,10,10,130.4248084,33.5821253
 "301","Tadaima Japan Shinjuku Ryokan","Tokyo",7600,"2.8km from city centre",8.4,"Fabulous",8,9,9,8,8,9,8,139.7229976,35.6897213
 "303","Tanaka Gokurakudo Guest House","Kyoto",2000,"2.7km from city centre",8.7,"Fabulous",8.2,9.1,8,9.3,8.7,8.9,8.4,135.7583091,34.98891
 "304","Tani9 Backpackers Osaka","Osaka",2000,"4.5km from city centre",9,"Superb",8.8,8.9,8.6,9.5,9.2,9.5,8.7,135.513636,34.6670278
 "305","The Blend Inn","Osaka",2300,"4.5km from city centre",9.6,"Superb",9.8,9.9,9.5,8.5,10,9.9,9.6,135.460685,34.684522
 "307","The Evergreen Hostel","Hiroshima",2000,"1.5km from city centre",9,"Superb",8.6,9.1,8.7,9.2,8.9,9.3,9,132.449763,34.3978868
-"308","THE LIFE hostel & bar lounge","Fukuoka-City",2400,"0.9km from city centre",9.1,"Superb",8.9,9.4,9.2,9.3,8.8,9.2,8.9,130.4113419,33.5912939
+"308","THE LIFE hostel & bar lounge","Fukuoka",2400,"0.9km from city centre",9.1,"Superb",8.9,9.4,9.2,9.3,8.8,9.2,8.9,130.4113419,33.5912939
 "309","The Lower East Nine Hostel","Kyoto",3000,"3.7km from city centre",9.4,"Superb",8.8,9.8,9.6,8.9,9.7,9.6,9.2,135.7600257,34.9793866
 "310","The Millennials Kyoto","Kyoto",2700,"0.5km from city centre",9.6,"Superb",9.3,9.8,9.8,9.9,9.6,9.4,9.5,135.7688947,35.0075126
 "311","The Millennials Shibuya","Tokyo",6300,"3.1km from city centre",9.3,"Superb",8.9,10,9.3,9.8,9.5,8.9,8.7,139.6996954,35.6621966
@@ -280,14 +278,14 @@
 "322","Tokyo Sumidagawa Youth Hostel","Tokyo",2500,"8.9km from city centre",7.7,"Very Good",6.5,6,8,8,9,9,7.5,139.7892234,35.6991309
 "323","TOKYO-W-INN Asakusa","Tokyo",2500,"9.3km from city centre",8.9,"Fabulous",8.2,9.2,8.9,8.9,8.8,9.4,9.2,139.7923088,35.7083161
 "324","Tomato Kyoto Station","Kyoto",1500,"3.1km from city centre",8.3,"Fabulous",8.3,8.3,8,7.3,8.3,9.3,8.7,135.751832,34.986881
-"325","Tonagi Hostel × Cafe","Fukuoka-City",2500,"2km from city centre",8.9,"Fabulous",9,9,9.3,7.3,9.3,9,9.3,130.41452,33.604248
+"325","Tonagi Hostel × Cafe","Fukuoka",2500,"2km from city centre",8.9,"Fabulous",9,9,9.3,7.3,9.3,9,9.3,130.41452,33.604248
 "326","Train Hostel HOKUTOSEI","Tokyo",2100,"8.3km from city centre",8.7,"Fabulous",7.4,9.3,9,8.7,8.8,9.2,8.8,139.7828434,35.694048
 "327","Turn Table Hostel","Tokyo",5400,"3.8km from city centre",9.6,"Superb",9.4,9.9,9.7,9.7,9.6,9.6,9.3,139.6929157,35.6553861
 "328","Umbrella House Osaka","Osaka",2300,"8.5km from city centre",6.8,"Good",6,8,6.6,5.4,7.4,7.4,6.9,135.546582,34.639764
 "329","Uno Ueno","Tokyo",1500,"8.2km from city centre",8.8,"Fabulous",7.8,9.3,8.5,8.9,9.2,9.3,8.6,139.7791708,35.7087463
 "330","Unplan Kagurazaka","Tokyo",3200,"4km from city centre",9.5,"Superb",9.2,9.9,9.6,8.8,9.6,9.8,9.6,139.7313228,35.7050654
 "331","Very Hostel Namba","Osaka",2500,"4.9km from city centre",9,"Superb",8.8,9.2,9.2,8.8,8.4,9.2,9.2,135.4888061,34.6636522
-"332","WeBase HAKATA","Fukuoka-City",3000,"0.9km from city centre",9.5,"Superb",9,9.8,9.7,9.4,9.7,9.7,9.3,130.408271,33.595674
+"332","WeBase HAKATA","Fukuoka",3000,"0.9km from city centre",9.5,"Superb",9,9.8,9.7,9.4,9.7,9.7,9.3,130.408271,33.595674
 "333","WIRED HOTEL Asakusa","Tokyo",5200,"9.7km from city centre",9.5,"Superb",8.9,10,9.9,9.1,9.7,9.6,9.5,139.793905,35.7158533
 "334","Wise Owl Hostels Shibuya","Tokyo",2500,"4km from city centre",9.1,"Superb",8.9,9.6,9.1,8.4,9.6,9.5,8.8,139.6897743,35.6537001
 "335","Wise Owl Hostels Tokyo","Tokyo",2000,"7.9km from city centre",9.1,"Superb",8.4,9.5,9.1,9.1,9.4,9.3,9.1,139.7772748,35.6747807

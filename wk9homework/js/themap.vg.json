@@ -2,8 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "A map of Japan with hostels",
   "title": "Japan",
-  "width": 500,
-  "height": 800,
+  "width": 700,
+  "height": 1000,
   "layer": [
     {
       "data": {
@@ -16,7 +16,7 @@
     {
       "data": {"url": "https://raw.githubusercontent.com/dnylng/3179/main/wk9homework/data/Hostel.csv"},
       "projection": {"type": "mercator"},
-      "mark": {"type": "circle", "size": 60, "color": "red"},
+      "mark": {"type": "circle", "size": 10, "color": "red"},
       "encoding": {
         "longitude": {"field": "lon", "type": "quantitative"},
         "latitude": {"field": "lat", "type": "quantitative"},
