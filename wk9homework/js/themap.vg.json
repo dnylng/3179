@@ -2,8 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "A map of Japan with hostels",
   "title": "Japan",
-  "width": 700,
-  "height": 1000,
+  "width": 5000,
+  "height": 8000,
   "layer": [
     {
       "data": {
