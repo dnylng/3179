@@ -1,3 +1,4 @@
+
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "A map of Japan",
@@ -5,11 +6,28 @@
     "width": 500,
     "height": 800,
     "data": {
-      "url": "https://raw.githubusercontent.com/dnylng/3179/main/wk9homework/js/ne_10m_admin_0_countries.json", 
-      "format": {"type": "topojson", "feature": "ne_10m_admin_0_countries"}
+      "url": "https://raw.githubusercontent.com/dnylng/3179/main/wk9homework/js/ne_10m_admin_1_states_provinces.json", 
+      "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
     },
+    "transform": [
+      {
+        "lookup": "name",
+        "from": {
+          "data": {"url": "https://raw.githubusercontent.com/dnylng/3179/main/wk9homework/data/Hostel.csv"},
+          "key": "City",
+          "fields": ["price.from", "summary.score", "rating.band"]
+        }
+      }
+    ],
     "projection": {"type": "mercator"},
     "mark": {"type": "geoshape", "fill": "#ccc", "stroke": "#fff"},
-    "encoding": {}
-  }
+    "encoding": {
+      "tooltip": [
+        {"field": "City", "type": "nominal", "title": "City"},
+        {"field": "price.from", "type": "quantitative", "title": "Price From"},
+        {"field": "summary.score", "type": "quantitative", "title": "Summary Score"},
+        {"field": "rating.band", "type": "nominal", "title": "Rating Band"}
+      ]
+    }
+}
   
