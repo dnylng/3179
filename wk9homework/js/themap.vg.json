@@ -23,7 +23,7 @@
         "tooltip": [
           {"field": "hostel.name", "type": "nominal", "title": "Hostel Name"},
           {"field": "City", "type": "nominal", "title": "City"},
-          {"field": "Distance", "type": "quantitative", "title": "Price From"},
+          {"field": "price.from", "type": "quantitative", "title": "Price From"},
           {"field": "summary.score", "type": "quantitative", "title": "Summary Score"},
           {"field": "rating.band", "type": "nominal", "title": "Rating Band"}
         ]
