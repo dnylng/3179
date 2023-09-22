@@ -21,11 +21,11 @@
         "longitude": {"field": "lon", "type": "quantitative"},
         "latitude": {"field": "lat", "type": "quantitative"},
         "tooltip": [
-          {"field": "hostel.name", "type": "nominal", "title": "Hostel Name"},
+          {"field": "hostel_name", "type": "nominal", "title": "Hostel Name"},
           {"field": "City", "type": "nominal", "title": "City"},
-          {"field": "price.from", "type": "quantitative", "title": "Price From"},
-          {"field": "summary.score", "type": "quantitative", "title": "Summary Score"},
-          {"field": "rating.band", "type": "nominal", "title": "Rating Band"}
+          {"field": "price_from", "type": "quantitative", "title": "Price From"},
+          {"field": "summary_score", "type": "quantitative", "title": "Summary Score"},
+          {"field": "rating_band", "type": "nominal", "title": "Rating Band"}
         ]
       }
     }
