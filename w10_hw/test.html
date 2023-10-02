@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    const spec = {
+      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "title": "Explained By Factors for the top 10 Countries",
+      "width": 600, 
+      "height": 300,
+      "data": {
+        "url": "https://raw.githubusercontent.com/dnylng/3179/main/w10_hw/data/world-happiness-report-2021.csv"
+      },
+      "selection": {
+        "Country": {
+          "type": "single",
+          "fields": ["Country_name"],
+          "bind": {
+            "input": "select",
+            "options": [
+              "Finland",
+              "Denmark",
+              "Switzerland",
+              "Iceland",
+              "Netherlands",
+              "Norway",
+              "Sweden",
+              "Luxembourg",
+              "New Zealand",
+              "Austria"
+            ],
+            "name": "Country "
+          },
+          "init": {"Country_name": "Finland"}
+        }
+      },
+      "transform": [
+        {
+          "fold": ["E_Log_GDP_per_capita", "E_Social_support", "E_Healthy_life_expectancy", "E_Freedom_to_make_life_choices", "E_Generosity", "E_Perceptions_of_corruption"],
+          "as": ["Factor", "Value"]
+        },
+        {"filter": {"selection": "Country"}}
+      ],
+      "mark": "bar",
+      "encoding": {
+        "y": {"field": "Factor", "type": "nominal", "axis": {"labelAngle": 0}, "title": "Explained By Factors"},
+        "x": {"field": "Value", "type": "quantitative", "title": "Value"},
+        "color": {"field": "Factor", "type": "nominal", "legend": {"title": "Factors"}}
+      }
+    };
+
+    vegaEmbed("#vis", spec, {mode: "vega-lite"}).catch(console.error);
+  </script>
+</body>
+</html>
