@@ -15,6 +15,13 @@
       "width": 800,
       "height": 400,
       "projection": {"type": "equalEarth"},
+      "selection": {
+        "country_highlight": {
+          "type": "multi",
+          "fields": ["properties.NAME"],
+          "bind": "legend"
+        }
+      },
       "layer": [
         {
           "data": {
@@ -50,6 +57,10 @@
           ],
           "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth": 1},
           "encoding": {
+            "opacity": {
+              "condition": {"selection": "country_highlight", "value": 0.6},
+              "value": 0.2
+            },
             "color": {
               "condition": {"test": "datum['Happiness Score'] > 0", "field": "Happiness Score", "type": "quantitative", "scale": {"domain": [1, 10], "scheme": "yelloworangered"}},
               "value": "#ddd"
