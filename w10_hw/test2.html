@@ -5,6 +5,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="vis1"></div>
@@ -65,60 +66,64 @@
     };
     vegaEmbed("#vis1", spec1, {mode: "vega-lite"}).then(console.log).catch(console.warn);
   </script>
-
-  <div id="vis2"></div>
-  <script>
-    const spec2 = {
-        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-        "title": "Explained By Factors for the top 10 Countries",
-        "width": 600, 
-        "height": 300,
-        "data": {
-            "url": "https://raw.githubusercontent.com/dnylng/3179/main/w10_hw/data/world-happiness-report-2021.csv"
-        },
-        "selection": {
-            "Country": {
-            "type": "single",
-            "fields": ["Country_name"],
-            "bind": {
-                "input": "select",
-                "options": [
-                "Finland",
-                "Denmark",
-                "Switzerland",
-                "Iceland",
-                "Netherlands",
-                "Norway",
-                "Sweden",
-                "Luxembourg",
-                "New Zealand",
-                "Austria"
-                ],
-                "name": "Country "
+    <div>
+    <div id="vis2"></div>
+    <div class="chart-annotation">
+        'Explained by' factors don't necessarily add up to the happiness score.
+        </div>
+    <script>
+        const spec2 = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Explained By Factors for the top 10 Countries",
+            "width": 600, 
+            "height": 300,
+            "data": {
+                "url": "https://raw.githubusercontent.com/dnylng/3179/main/w10_hw/data/world-happiness-report-2021.csv"
             },
-            "init": {"Country_name": "Finland"}
+            "selection": {
+                "Country": {
+                "type": "single",
+                "fields": ["Country_name"],
+                "bind": {
+                    "input": "select",
+                    "options": [
+                    "Finland",
+                    "Denmark",
+                    "Switzerland",
+                    "Iceland",
+                    "Netherlands",
+                    "Norway",
+                    "Sweden",
+                    "Luxembourg",
+                    "New Zealand",
+                    "Austria"
+                    ],
+                    "name": "Country ",
+                },
+                "init": {"Country_name": "Finland"}
+                }
+            },
+            "transform": [
+                {
+                "fold": ["E_Log_GDP_per_capita", "E_Social_support", "E_Healthy_life_expectancy", "E_Freedom_to_make_life_choices", "E_Generosity", "E_Perceptions_of_corruption"],
+                "as": ["Factor", "Value"]
+                },
+                {
+                "calculate": "datum.Factor === 'E_Log_GDP_per_capita' ? 'Log GDP per Capita' : datum.Factor === 'E_Social_support' ? 'Social Support' : datum.Factor === 'E_Healthy_life_expectancy' ? 'Healthy Life Expectancy' : datum.Factor === 'E_Freedom_to_make_life_choices' ? 'Freedom to make Life Choices' : datum.Factor === 'E_Generosity' ? 'Generosity' : datum.Factor === 'E_Perceptions_of_corruption' ? 'Perceptions of Corruption' : datum.Factor",
+                "as": "Readable_Factor"
+                },
+                {"filter": {"selection": "Country"}}
+            ],
+            "mark": "bar",
+            "encoding": {
+                "y": {"field": "Readable_Factor", "type": "nominal", "axis": {"labelAngle": 0}, "title": "Factors"},
+                "x": {"field": "Value", "type": "quantitative", "title": "Value"},
+                "color": {"field": "Readable_Factor", "type": "nominal", "legend": {"title": "Factors"}},
+                "tooltip": [{"field": "Value", "type": "quantitative", "title": "Value"}]
             }
-        },
-        "transform": [
-            {
-            "fold": ["E_Log_GDP_per_capita", "E_Social_support", "E_Healthy_life_expectancy", "E_Freedom_to_make_life_choices", "E_Generosity", "E_Perceptions_of_corruption"],
-            "as": ["Factor", "Value"]
-            },
-            {
-            "calculate": "datum.Factor === 'E_Log_GDP_per_capita' ? 'Log GDP per Capita' : datum.Factor === 'E_Social_support' ? 'Social Support' : datum.Factor === 'E_Healthy_life_expectancy' ? 'Healthy Life Expectancy' : datum.Factor === 'E_Freedom_to_make_life_choices' ? 'Freedom to make Life Choices' : datum.Factor === 'E_Generosity' ? 'Generosity' : datum.Factor === 'E_Perceptions_of_corruption' ? 'Perceptions of Corruption' : datum.Factor",
-            "as": "Readable_Factor"
-            },
-            {"filter": {"selection": "Country"}}
-        ],
-        "mark": "bar",
-        "encoding": {
-            "y": {"field": "Readable_Factor", "type": "nominal", "axis": {"labelAngle": 0}, "title": "Factors"},
-            "x": {"field": "Value", "type": "quantitative", "title": "Value"},
-            "color": {"field": "Readable_Factor", "type": "nominal", "legend": {"title": "Factors"}},
-            "tooltip": [{"field": "Value", "type": "quantitative", "title": "Value"}]
-        }
-    };
-    vegaEmbed("#vis2", spec2, {mode: "vega-lite"}).catch(console.error);
-  </script>
+        };
+        vegaEmbed("#vis2", spec2, {mode: "vega-lite"}).catch(console.error);
+    </script>
+    </div>
 </body>
 </html>

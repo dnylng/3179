@@ -1,0 +1,10 @@
+.chart-container {
+    position: relative;
+}
+
+.chart-annotation {
+    position: absolute;
+    top: 55%;  
+    left: 330px; 
+    transform: translateY(-50%); 
+}
