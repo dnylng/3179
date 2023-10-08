@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+
+<body>
+    <h2>Scatterplot: Ladder Score vs. Social Support</h2>
+    <div id="scatterSocialSupport"></div>
+
+    <h2>Scatterplot: Ladder Score vs. Healthy Life Expectancy</h2>
+    <div id="scatterHealthyLifeExpectancy"></div>
+
+    <h2>Scatterplot: Ladder Score vs. GDP Per Capita</h2>
+    <div id="scatterGDPPerCapita"></div>
+
+    <h2>Scatterplot: Ladder Score vs. Freedom to Make Life Choices</h2>
+    <div id="scatterFreedomToMakeLifeChoices"></div>
+
+    <h2>Scatterplot: Ladder Score vs. Perceptions of Corruption</h2>
+    <div id="scatterPerceptionsOfCorruption"></div>
+
+    <script>
+        const dataUrl = "https://raw.githubusercontent.com/dnylng/3179/main/Assignment2/data/world-happiness-report-2023.csv";
+
+        const baseSpec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "data": {
+                "url": dataUrl
+            },
+            "mark": "point",
+            "encoding": {
+                "x": {
+                    "field": "Ladder_score",
+                    "type": "quantitative",
+                    "title": "Ladder Score"
+                }
+            }
+        };
+
+        // Scatterplot: Ladder Score vs. Social Support
+        const socialSupportSpec = JSON.parse(JSON.stringify(baseSpec));
+        socialSupportSpec.encoding.y = {
+            "field": "Social_support",
+            "type": "quantitative",
+            "title": "Social Support"
+        };
+        vegaEmbed("#scatterSocialSupport", socialSupportSpec, { mode: "vega-lite" }).then(console.log).catch(console.warn);
+
+        // Scatterplot: Ladder Score vs. Healthy Life Expectancy
+        const healthyLifeExpectancySpec = JSON.parse(JSON.stringify(baseSpec));
+        healthyLifeExpectancySpec.encoding.y = {
+            "field": "Healthy_life_expectancy",
+            "type": "quantitative",
+            "title": "Healthy Life Expectancy"
+        };
+        vegaEmbed("#scatterHealthyLifeExpectancy", healthyLifeExpectancySpec, { mode: "vega-lite" }).then(console.log).catch(console.warn);
+
+        // Scatterplot: Ladder Score vs. GDP Per Capita
+        const gdpPerCapitaSpec = JSON.parse(JSON.stringify(baseSpec));
+        gdpPerCapitaSpec.encoding.y = {
+            "field": "GDP_per_capita",
+            "type": "quantitative",
+            "title": "GDP Per Capita"
+        };
+        vegaEmbed("#scatterGDPPerCapita", gdpPerCapitaSpec, { mode: "vega-lite" }).then(console.log).catch(console.warn);
+
+        // Scatterplot: Ladder Score vs. Freedom to Make Life Choices
+        const freedomToMakeLifeChoicesSpec = JSON.parse(JSON.stringify(baseSpec));
+        freedomToMakeLifeChoicesSpec.encoding.y = {
+            "field": "Freedom_to_make_life_choices",
+            "type": "quantitative",
+            "title": "Freedom to Make Life Choices"
+        };
+        vegaEmbed("#scatterFreedomToMakeLifeChoices", freedomToMakeLifeChoicesSpec, { mode: "vega-lite" }).then(console.log).catch(console.warn);
+
+        // Scatterplot: Ladder Score vs. Perceptions of Corruption
+        const perceptionsOfCorruptionSpec = JSON.parse(JSON.stringify(baseSpec));
+        perceptionsOfCorruptionSpec.encoding.y = {
+            "field": "Perceptions_of_corruption",
+            "type": "quantitative",
+            "title": "Perceptions of Corruption"
+        };
+        vegaEmbed("#scatterPerceptionsOfCorruption", perceptionsOfCorruptionSpec, { mode: "vega-lite" }).then(console.log).catch(console.warn);
+    </script>
+</body>
+
+</html>

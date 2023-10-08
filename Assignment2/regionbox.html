@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+    <div id="vis"></div>
+    <script>
+        const spec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "data": {
+                "url": "https://raw.githubusercontent.com/dnylng/3179/main/Assignment2/data/world-happiness-report-2023.csv"
+            },
+            "transform": [
+                {
+                    "lookup": "Country_name",
+                    "from": {
+                        "data": {
+                            "url": "https://raw.githubusercontent.com/dnylng/3179/main/Assignment2/data/continents.csv"
+                        },
+                        "key": "name",
+                        "fields": ["region"]
+                    }
+                }
+            ],
+            "mark": "boxplot",
+            "encoding": {
+                "x": {
+                    "field": "region",
+                    "type": "nominal",
+                    "title": "Region"
+                },
+                "y": {
+                    "field": "Ladder_score",
+                    "type": "quantitative",
+                    "title": "Happiness Level"
+                }
+            }
+        };
+        vegaEmbed("#vis", spec, { mode: "vega-lite" });
+    </script>
+</body>
+</html>

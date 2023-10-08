@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+
+<body>
+    <div id="vis"></div>
+    <script>
+        const happinessDataUrl = "https://raw.githubusercontent.com/dnylng/3179/main/Assignment2/data/world-happiness-report-2023.csv";
+        const worldDataUrl = "https://raw.githubusercontent.com/dnylng/3179/main/Assignment2/data/world-data-2023.csv";
+
+        const spec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "data": {
+                "url": happinessDataUrl,
+                "name": "happiness"
+            },
+            "transform": [{
+                "lookup": "Country_name",
+                "from": {
+                    "data": {
+                        "url": worldDataUrl
+                    },
+                    "key": "Country",
+                    "fields": ["Official_language"]
+                }
+            }, {
+                "filter": "datum.Ladder_score > 7"
+            }, {
+                "aggregate": [{
+                    "op": "count",
+                    "as": "number_of_countries"
+                }],
+                "groupby": ["Official_language"]
+            }],
+            "mark": "bar",
+            "encoding": {
+                "y": {
+                    "field": "Official_language",
+                    "type": "ordinal",
+                    "title": "Language"
+                },
+                "x": {
+                    "field": "number_of_countries",
+                    "type": "quantitative",
+                    "title": "Number of Countries"
+                }
+            },
+            "title": "Most Spoken Languages in Countries with a Score > 6"
+        };
+
+        vegaEmbed("#vis", spec, { mode: "vega-lite" }).then(console.log).catch(console.warn);
+    </script>
+</body>
+
+</html>

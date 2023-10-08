@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+
+<body>
+    <div id="vis"></div>
+    <script>
+        const spec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Explained by Factors for Selected Country (2023)",
+            "data": {
+                "url": "https://raw.githubusercontent.com/dnylng/3179/main/Assignment2/data/world-happiness-report-2023.csv"
+            },
+            "selection": {
+                "country": {
+                    "type": "single",
+                    "fields": ["Country_name"],
+                    "bind": {
+                        "input": "select",
+                        "options": ["Finland", "Denmark", "Iceland", "Israel", "Netherlands"],
+                        "name": "Select Country"
+                    },
+                    "init": { "Country_name": "Finland" }
+                }
+            },
+            "transform": [
+                {
+                    "filter": {
+                        "field": "Country_name",
+                        "oneOf": ["Finland", "Denmark", "Iceland", "Israel", "Netherlands"]
+                    }
+                },
+                {
+                    "filter": {"selection": "country"}
+                },
+                {
+                    "fold": ["E_Log_GDP_per_capita", "E_Social_support", "E_Healthy_life_expectancy", "E_Freedom_to_make_life_choices", "E_Generosity", "E_Perceptions_of_corruption"],
+                    "as": ["Factors", "Value"]
+                }
+            ],
+            "mark": {
+                "type": "arc",
+                "innerRadius": 100
+            },
+            "encoding": {
+                "theta": {
+                    "field": "Value",
+                    "type": "quantitative",
+                    "stack": true
+                },
+                "color": {
+                    "field": "Factors",
+                    "type": "nominal",
+                    "legend": {
+                        "title": "Explained By Factors"
+                    }
+                },
+                "tooltip": [
+                    {"field": "Factors", "type": "nominal", "title": "Factor"},
+                    {"field": "Value", "type": "quantitative", "title": "Value"}
+                ]
+            },
+            "view": { "stroke": null },
+            "width": 400,
+            "height": 400
+        };
+
+        vegaEmbed("#vis", spec, { mode: "vega-lite" }).then(console.log).catch(console.warn);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+
+<body>
+    <h2>Top 10 Countries by Ladder Score (2023)</h2>
+    <div id="visTop"></div>
+    
+    <h2>Bottom 10 Countries by Ladder Score (2023)</h2>
+    <div id="visBottom"></div>
+
+    <script>
+        const baseSpec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "data": {
+                "url": "https://raw.githubusercontent.com/dnylng/3179/main/Assignment2/data/world-happiness-report-2023.csv"
+            },
+            "transform": [
+                {
+                    "fold": ["E_Log_GDP_per_capita", "E_Social_support", "E_Healthy_life_expectancy", "E_Freedom_to_make_life_choices", "E_Generosity", "E_Perceptions_of_corruption"],
+                    "as": ["Factors", "Value"]
+                }
+            ],
+            "mark": "bar",
+            "encoding": {
+                "y": {
+                    "field": "Country_name",
+                    "type": "ordinal",
+                    "sort": "-x",
+                    "title": "Country"
+                },
+                "x": {
+                    "field": "Value",
+                    "type": "quantitative",
+                    "title": "Combined Factors Value",
+                    "stack": "normalize"
+                },
+                "color": {
+                    "field": "Factors",
+                    "type": "nominal",
+                    "legend": {
+                        "title": "Explained By Factors"
+                    }
+                },
+                "tooltip": [
+                    {"field": "Country_name", "type": "nominal", "title": "Country"},
+                    {"field": "Factors", "type": "nominal", "title": "Factor"},
+                    {"field": "Value", "type": "quantitative", "title": "Value"}
+                ]
+            }
+        };
+
+        const topCountries = ["Finland", "Denmark", "Iceland", "Israel", "Netherlands", "Sweden", "Norway", "Switzerland", "Luxembourg", "New Zealand"];
+        const bottomCountries = ["Zambia", "Tanzania", "Comoros", "Malawi", "Botswana", "Congo (Kinshasa)", "Zimbabwe", "Sierra Leone", "Lebanon", "Afghanistan"];
+        
+        const topSpec = JSON.parse(JSON.stringify(baseSpec));
+        topSpec.transform.push({
+            "filter": {
+                "field": "Country_name",
+                "oneOf": topCountries
+            }
+        });
+        
+        const bottomSpec = JSON.parse(JSON.stringify(baseSpec));
+        bottomSpec.transform.push({
+            "filter": {
+                "field": "Country_name",
+                "oneOf": bottomCountries
+            }
+        });
+
+        vegaEmbed("#visTop", topSpec, { mode: "vega-lite" }).then(console.log).catch(console.warn);
+        vegaEmbed("#visBottom", bottomSpec, { mode: "vega-lite" }).then(console.log).catch(console.warn);
+    </script>
+</body>
+
+</html>
