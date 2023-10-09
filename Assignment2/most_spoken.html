@@ -16,6 +16,8 @@
 
         const spec = {
             "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "height": 450,
+            "width": 300,
             "data": {
                 "url": happinessDataUrl,
                 "name": "happiness"
@@ -30,7 +32,7 @@
                     "fields": ["Official_language"]
                 }
             }, {
-                "filter": "datum.Ladder_score > 7"
+                "filter": "datum.Ladder_score > 6.8"
             }, {
                 "aggregate": [{
                     "op": "count",

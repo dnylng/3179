@@ -14,6 +14,8 @@
         const spec = {
             "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
             "title": "Explained by Factors for Selected Country (2023)",
+            "width": 175,
+            "height": 175,
             "data": {
                 "url": "https://raw.githubusercontent.com/dnylng/3179/main/Assignment2/data/world-happiness-report-2023.csv"
             },
@@ -46,7 +48,6 @@
             ],
             "mark": {
                 "type": "arc",
-                "innerRadius": 100
             },
             "encoding": {
                 "theta": {
@@ -67,8 +68,6 @@
                 ]
             },
             "view": { "stroke": null },
-            "width": 400,
-            "height": 400
         };
 
         vegaEmbed("#vis", spec, { mode: "vega-lite" }).then(console.log).catch(console.warn);

@@ -2,6 +2,8 @@ const dataUrl = "https://raw.githubusercontent.com/dnylng/3179/main/Assignment2/
 const baseSpec = {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": { "url": dataUrl },
+    "width": 400,
+    "height": 380,
     "mark": {
         "type": "point",
         "shape": "circle",  
@@ -34,7 +36,7 @@ function updateScatterPlot(index) {
         "type": "quantitative",
         "title": scatterSpecs[index].title
     };
-    document.getElementById("scatterTitle").textContent = "Scatterplot: Ladder Score vs. " + scatterSpecs[index].title;
+    document.getElementById("scatterTitle").textContent = "Ladder Score vs. " + scatterSpecs[index].title;
     vegaEmbed("#scatterPlot", scatterSpec, { mode: "vega-lite" }).then(console.log).catch(console.warn);
 }
 
