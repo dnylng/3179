@@ -7,26 +7,55 @@
 </head>
 
 <body>
-
-    <h1>World Happiness Report 2023</h1>
+    <div class="main-title">World Happiness Report 2023</div>
 
     <div id="map">
-        <embed src="map.html" width="100%" height="100%"></embed>
+        <embed src="map.html" width="100%" height="100%"></embed>  
     </div>
+    <div id="additionalContainer">
+        <h2>"Happiness depends upon ourselves" - Aristotle</h2>
+        <p>
+            The <strong>World Happiness Report</strong> is an annual publication that marks the ranks
+            of happiness based on the well-being of their citizens. People are asked to
+            evaluate their current lives on a scale of 0 to 10, with <span style="color: lightseagreen;">10 representing the 
+                best possible life</span> and <span style="color: lightcoral;">0 the worst possible life</span>. It provides a holistic view 
+            of wellbeing.
+        </p>   
+    </div>    
 
     <div class="content-row">
         <div class="section leftSection">
-            On the left is the average happiness level of each region and subregions inside of a boxplot. We can see that Europe and Oceania have
-            the highest average happiness level, has the lowest average happiness level.
-            <p>The top boxplot represents the happiness levels of each major region we can see that Africa has on average the lowest Happiness
-                score compared to all the other major regions
+            <h1>Happiness Across the Globe</h1>
+            <p>Around the globe happiness levels vary extremely, therforem it is essential
+                to recognise the differences in happiness scores across both different regions 
+                and different sub-regions. To the right are boxplots that show the happiness levels for 
+                both categories.
             </p>
-            <p>The bottom boxplot represents the happiness levels of each minor region</p>
+            <h3>Happiness Across Regions</h3>
+            <p>
+                Historically, European countries often rank high in happiness scores. Oceania also fares very 
+                well in terms of happiness, however there are not many countries in Oceania so the data is specific. 
+            </p>
+            <p>
+                On the other hand, African countries often rank low in happiness scores. With some parts of Asia 
+                being ranked lowly as well. This can be due to a combination of many factors. It has consistenting been 
+                this way for the major regions across the previous years of the world happiness report.
+            </p>
+            <h3>Happiness Across Sub-Regions</h3>
+            <p>
+                Within larger regions, subregions can show significant variations in happiness. For instance East 
+                Asia might have a different distribution than those in South Asia or Southeach Asia.
+            </p>
+            <p> 
+                Demonstrating that happiness for a region does not necessarily mean happiness for all subregions. 
+                This makes it almost ignorant to just look at data from a regional perspective and instead to have a more 
+                accurate representation of happiness, subregions should be considered as well.
+            </p>
         </div>
 
         <div class="section rightSection">
-            <embed src="regionbox.html" width="100%" height="50%"></embed>
-            <embed src="regionsub.html" width="100%" height="50%"></embed>
+            <embed src="regionbox.html" width="100%" height="40%"></embed>
+            <embed src="regionsub.html" width="100%" height="60%"></embed>
         </div>
     </div>
 
@@ -36,15 +65,22 @@
         </div>
 
         <div class="section rightSection">
-            <p>On the left is a scatterplot which compares the happiness level with many other factors which influence it</p>
-            <p>On the bottom is a pie chart which shows the happiness and its explained by factors, please be aware that all the values 
-                in the explained by do not neccessarily add up to the happiness score because the factors just show how much it affects the 
-                happiness score, not the actual happiness score itself.
+            <h1>Factors influencing Happiness</h1>
+            <h3>"Normal" Factors</h3>
+            <p>
+                The report examines several factors believed to influence happiness. These represent the actual, 
+                observed data points without transformation 
             </p>
-            <p>From the data we can see the GDP and life expectancy are the most important factors when it comes to the world happiness
-                level but it is not the do all or end all. 
+            <p><strong>GDP per capita:</strong> Economic performance of a country</p>
+            <p><strong>Social support</strong> Having someone to count on in difficult times</p>
+            <p><strong>Healthy life expectancy:</strong> Expected years of good health</p>
+            <p><strong>Freedom to make life choices:</strong> The level of freedom in daily life</p>
+            <p><strong>Generosity</strong> Measures of giving within a society</p>
+            <p><strong>Perceptions of Corruption</strong> Widespread corruption believed in the country</p>
+            <p><strong>"Explained by"</strong> refers to the factors that instead of raw values, they explain the variation in happiness 
+                scores between countries. Compare Australia/Malaysia against the top/bottom 5 happiest countries
             </p>
-            <embed src="explained_by_pie.html" width="100%" height="50%"></embed>
+            <embed src="dot.html" width="100%" height="50%"></embed>
         </div>
     </div>
 
@@ -54,9 +90,31 @@
         </div>
 
         <div class="section rightSection">
-            <p>We can see that the countries with the highest happiness level are countries that speak a European Language
-                are the happiest countries. This is consistent with the data in the boxplots as they show that European countries
-                are on average the happiest countries with barely any outliers
+            <h1>Final Remarks</h1>
+            <h3>Most important Factors</h3>
+            <p>
+                From analysing the data above, the most important factors of happiness scores of countries 
+                are <strong>GDP per capita</strong> and <strong>Social support</strong>. Higher wealth in countries also suggest positive correlations
+                in other factors such as life expectancy and social support. 
+            </p>
+                Although it can provide vital information for governments to help countries further develop their infrastructure, 
+                one must remember that correlation does not imply causation.
+            <p>
+
+            </p>
+            <h3>Geogrophy</h3>
+            <p>
+                The highest scorers are located in <strong>Europe</strong> and <strong>Oceania</strong>. This is because these countries are more developed with 
+                their respective governments providing more support for their citizens and their existing infrastructure. 
+                However, these are not to be taken literally as happiness is still subjective but it is a good indicator
+            </p>
+            <h3>Language</h3>
+            <p>
+                The most spoken languages in the world are Mandarin, Spanish, and English. However, the countries that 
+                speak these languages do not necessarily have the highest happiness scores. This is because happiness 
+                is not only influenced by language, but also by geography, culture, and other factors. 
+                Although English is one of the most spoken languages, this does not have that much of a global correlation.
+                We see that European countires that speak <strong>German</strong> and <strong>French</strong> have higher happiness scores.
             </p>
         </div>
     </div>

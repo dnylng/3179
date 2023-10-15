@@ -11,8 +11,8 @@
     <script>
         const spec = {
             "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-            "width": 400,
-            "height": 145,
+            "width": 455,
+            "height": 150,
             "data": {
                 "url": "https://raw.githubusercontent.com/dnylng/3179/main/Assignment2/data/world-happiness-report-2023.csv"
             },
@@ -29,23 +29,34 @@
                 },
                 {
                     "filter": {"field": "region", "oneOf": ["Africa", "Americas", "Asia", "Europe", "Oceania"]},
-                }
+                },
+                {
+                    "filter": {"field": "Ladder_score", "range": [3, 8]}
+                },
             ],
             "mark": "boxplot",
             "encoding": {
+                "color": {
+                    "field": "region",
+                    "type": "nominal",
+                    "title": "Region",
+                    "legend": null
+                },
                 "x": {
                     "field": "region",
                     "type": "nominal",
-                    "title": "Region"
+                    "title": "Region",
+                    "axis": {"labelAngle": 45}
                 },
                 "y": {
                     "field": "Ladder_score",
                     "type": "quantitative",
-                    "title": "Happiness Level"
+                    "title": "Happiness Level",
+                    "scale": {"domain": [3, 8]}
                 }
             }
         };
-        vegaEmbed("#vis", spec, { mode: "vega-lite" });
+        vegaEmbed("#vis", spec, {actions: false}, { mode: "vega-lite" });
     </script>
 </body>
 </html>

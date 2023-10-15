@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
-
 <body>
     <div id="vis"></div>
     <script>
         const spec = {
             "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-            "title": "World Happiness Ladder Score 2023",
-            "width": 800,
-            "height": 400,
+            "title": "World Happiness Ladder Score 2023 - Hover to see Happiness Score",
+            "width": 1180,
+            "height": 390,
             "projection": {
                 "type": "equalEarth"
             },
-            "layer": [{
+            "layer": [
+                {
                     "data": {
                         "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
                         "format": {
@@ -54,7 +53,8 @@
                             "feature": "ne_50m_admin_0_countries"
                         }
                     },
-                    "transform": [{
+                    "transform": [
+                        {
                             "lookup": "properties.NAME",
                             "from": {
                                 "data": {
@@ -101,13 +101,18 @@
                                 "field": "Happiness Score",
                                 "type": "quantitative",
                                 "scale": {
-                                    "domain": [1, 10],
-                                    "scheme": "yelloworangered"
+                                    "domain": [1, 8],
+                                    "range": ["red", "orange", "green"] 
+                                },
+                                "legend": {
+                                    "orient": "bottom",
+                                    "offset": -40
                                 }
                             },
                             "value": "#ddd"
                         },
-                        "tooltip": [{
+                        "tooltip": [
+                            {
                                 "field": "properties.NAME",
                                 "type": "nominal",
                                 "title": "Country"
@@ -122,10 +127,10 @@
                 }
             ]
         };
-        vegaEmbed("#vis", spec, {
+        vegaEmbed("#vis", spec, {actions: false}, {
             mode: "vega-lite"
+            
         }).then(console.log).catch(console.warn);
     </script>
 </body>
-
 </html>

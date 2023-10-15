@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dot Plot Comparison</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+
+<body>
+
+    <div id="vis"></div>
+
+    <script type="text/javascript">
+        var spec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "width": 300,
+            "height": 90,
+            "title": "Explained by Factors Against Australia and Malaysia (2023)",
+            "description": "A dot plot comparing 'Explained by' factors for Australia, Malaysia, and a selectable country.",
+            "data": {
+                "url": "https://raw.githubusercontent.com/dnylng/3179/main/Assignment2/data/world-happiness-report-2023.csv"
+            },
+            "transform": [{
+                    "fold": ["E_Log_GDP_per_capita", "E_Social_support", "E_Healthy_life_expectancy", "E_Freedom_to_make_life_choices", "E_Generosity", "E_Perceptions_of_corruption"],
+                    "as": ["Factors", "Value"]
+                },
+                {
+                    "calculate": "replace(replace(datum.Factors, 'E_', ''), /_/g, ' ')",
+                    "as": "Factors"
+                },
+                {
+                    "filter": {
+                        "or": [{
+                                "field": "Country_name",
+                                "equal": "Australia"
+                            },
+                            {
+                                "field": "Country_name",
+                                "equal": "Malaysia"
+                            },
+                            {
+                                "selection": "CountrySelect"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "selection": {
+                "CountrySelect": {
+                    "type": "single",
+                    "fields": ["Country_name"],
+                    "init": {
+                        "Country_name": "Denmark"
+                    },
+                    "bind": {
+                        "input": "select",
+                        "options": ["Denmark", "Iceland", "Israel", "Netherlands", "Sweden", "Botswana", "Congo (Kinshasa)", "Zimbabwe", "Sierra Leone", "Lebanon", "Afghanistan"],
+                        "name": "Add Comparison"
+                    }
+                }
+            },
+            "encoding": {
+                "y": {
+                    "field": "Factors",
+                    "type": "nominal",
+                    "title": ""
+                },
+                "x": {
+                    "field": "Value",
+                    "type": "quantitative",
+                    "title": "Value"
+                },
+                "color": {
+                    "field": "Country_name",
+                    "type": "nominal",
+                    "scale": {
+                        "range": ["#e6959c", "#911a24", "#70cad1"]
+                    },
+                    "title": "Country"
+                }
+            },
+            "mark": {
+                "type": "point",
+                "filled": true,
+                "size": 100
+            }
+        };
+
+        vegaEmbed('#vis', spec, {
+            actions: false
+        });
+    </script>
+
+</body>
+
+</html>

@@ -11,8 +11,8 @@
     <script>
         const spec = {
             "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-            "width": 400,
-            "height": 80,
+            "width": 455,
+            "height": 200,
             "data": {
                 "url": "https://raw.githubusercontent.com/dnylng/3179/main/Assignment2/data/world-happiness-report-2023.csv"
             },
@@ -26,23 +26,37 @@
                         "key": "name",
                         "fields": ["sub-region"]
                     }
-                }
+                },
+                {
+                    "filter": {"field": "sub-region", "oneOf": ["Northern America", "Latin America and the Caribbean", "Sub-Saharan Africa", "Western Asia", "Southern Asia", "South-eastern Asia", "Eastern Asia", "Central Asia", "Australia and New Zealand", "Melanesia", "Micronesia", "Polynesia", "Northern Europe", "Western Europe", "Southern Europe", "Eastern Europe", "Middle Africa", "Northern Africa"]},
+                },
+                {
+                    "filter": {"field": "Ladder_score", "range": [3, 8]}
+                },
             ],
             "mark": "boxplot",
             "encoding": {
+                "color": {
+                    "field": "sub-region",
+                    "type": "nominal",
+                    "title": "Sub-Region",
+                    "legend": null
+                },
                 "x": {
                     "field": "sub-region",
                     "type": "nominal",
-                    "title": "Sub-Region"
+                    "title": "Sub-Region",
+                    "axis": {"labelAngle": 45}
                 },
                 "y": {
                     "field": "Ladder_score",
                     "type": "quantitative",
-                    "title": "Happiness Level"
+                    "title": "Happiness Level",
+                    "scale": {domain: [3, 8]}
                 }
             }
         };
-        vegaEmbed("#vis", spec, { mode: "vega-lite" });
+        vegaEmbed("#vis", spec, {actions: false}, { mode: "vega-lite" });
     </script>
 </body>
 </html>

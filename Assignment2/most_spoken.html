@@ -16,8 +16,8 @@
 
         const spec = {
             "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-            "height": 450,
-            "width": 300,
+            "height": 520,
+            "width": 340,
             "data": {
                 "url": happinessDataUrl,
                 "name": "happiness"
@@ -31,9 +31,14 @@
                     "key": "Country",
                     "fields": ["Official_language"]
                 }
-            }, {
-                "filter": "datum.Ladder_score > 6.8"
-            }, {
+            }, 
+            {
+                "filter": "datum.Ladder_score > 6.6"
+            }, 
+            {
+                "filter": "datum.Official_language !== null && datum.Official_language !== 'None'"
+            },
+            {
                 "aggregate": [{
                     "op": "count",
                     "as": "number_of_countries"
@@ -42,10 +47,21 @@
             }],
             "mark": "bar",
             "encoding": {
+                "color": {
+                    "field": "Official_language",
+                    "type": "nominal",
+                    "title": "Language",
+                    "scale": {"range": ["#FFC0CB"]},  // Hex code for pink
+                    "legend": null
+                },
                 "y": {
                     "field": "Official_language",
                     "type": "ordinal",
-                    "title": "Language"
+                    "title": "Language",
+                    "sort": {
+                        "field": "number_of_countries",
+                        "order": "descending"
+                    }
                 },
                 "x": {
                     "field": "number_of_countries",
@@ -53,10 +69,10 @@
                     "title": "Number of Countries"
                 }
             },
-            "title": "Most Spoken Languages in Countries with a Score > 6"
+            "title": "Most Spoken Languages in Countries with a Score > 6.6"
         };
 
-        vegaEmbed("#vis", spec, { mode: "vega-lite" }).then(console.log).catch(console.warn);
+        vegaEmbed("#vis", spec, {actions: false}, { mode: "vega-lite" }).then(console.log).catch(console.warn);
     </script>
 </body>
 

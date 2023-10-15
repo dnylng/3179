@@ -9,10 +9,12 @@
 </head>
 
 <body>
-    <input type="range" id="scatterSlider" min="1" max="5" value="1">
-    <h2 id="scatterTitle">Scatterplot: Ladder Score vs. Social Support</h2>
+    <label for="regionSelect">Adjust 6 factors ></label>
+    <input type="range" id="scatterSlider" min="1" max="6" value="1">
+    <label for="scatterSlider">Adjust Happiness > </label>
+    <input type="range" id="happinessFilter" min="2" max="8" value="2" step="0.1">
+    <h3 id="scatterTitle">Scatterplot: Ladder Score vs. Social Support</h3>
     <div id="scatterPlot"></div>
-
     <script src="script.js"></script>
 </body>
 

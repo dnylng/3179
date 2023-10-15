@@ -70,7 +70,7 @@
             "view": { "stroke": null },
         };
 
-        vegaEmbed("#vis", spec, { mode: "vega-lite" }).then(console.log).catch(console.warn);
+        vegaEmbed("#vis", spec, {actions: false}, { mode: "vega-lite" }).then(console.log).catch(console.warn);
     </script>
 </body>
 

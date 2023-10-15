@@ -6,33 +6,53 @@ body {
 
 #map {
     display: flex; 
-    width: 100%;
-    max-width: 1100px;
-    height: 500px; 
+    max-width: 1200px;
+    height: 450px; 
     margin: 20px auto;
     border: 1px solid #ccc;
     background-color: white;
     border-radius: 15px;
-    align-items: center;
-    justify-content: center;
+    border: 5px solid lightseagreen;
+
 }
 
+#additionalContainer {
+    display: flex; 
+    flex-direction: column;
+    max-width: 1160px;
+    height: 120px; 
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    border: 5px solid lightseagreen;
+}
+
+.main-title {
+    text-align: center;
+    color: seagreen; 
+    font: 80px Arial, sans-serif;
+    font-weight: bold;
+}
 
 .section {
     flex: 1;
     padding: 20px;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    height: 600px; 
+    height: 670px; 
     overflow: auto; 
     background-color: white;
     border-radius: 15px; 
+    overflow: hidden;
+    border: 5px solid lightseagreen;
 }
 
 .content-row {
     display: flex;
     justify-content: space-between;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 20px auto;
 }
 
@@ -42,5 +62,18 @@ body {
 
 h1 {
     text-align: center;
-    color: white; 
+    color: seagreen; 
+}
+
+h2 {
+    text-align: center;
+    color: skyblue; 
+}
+
+h3 {
+    color: darkseagreen; 
+}
+
+strong {
+    color: skyblue; 
 }
