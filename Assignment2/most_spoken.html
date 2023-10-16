@@ -13,6 +13,7 @@
     <script>
         const happinessDataUrl = "https://raw.githubusercontent.com/dnylng/3179/main/Assignment2/data/world-happiness-report-2023.csv";
         const worldDataUrl = "https://raw.githubusercontent.com/dnylng/3179/main/Assignment2/data/world-data-2023.csv";
+        const continentsDataUrl = "https://raw.githubusercontent.com/dnylng/3179/main/Assignment2/data/continents.csv";
 
         const spec = {
             "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
@@ -22,37 +23,47 @@
                 "url": happinessDataUrl,
                 "name": "happiness"
             },
-            "transform": [{
-                "lookup": "Country_name",
-                "from": {
-                    "data": {
-                        "url": worldDataUrl
-                    },
-                    "key": "Country",
-                    "fields": ["Official_language"]
+            "transform": [
+                {
+                    "lookup": "Country_name",
+                    "from": {
+                        "data": {
+                            "url": worldDataUrl
+                        },
+                        "key": "Country",
+                        "fields": ["Official_language"]
+                    }
+                },
+                {
+                    "lookup": "Country_name",
+                    "from": {
+                        "data": {
+                            "url": continentsDataUrl
+                        },
+                        "key": "name",
+                        "fields": ["region"]
+                    }
+                },
+                {
+                    "filter": "datum.Ladder_score > 6.6"
+                }, 
+                {
+                    "filter": "datum.Official_language !== null && datum.Official_language !== 'None'"
+                },
+                {
+                    "aggregate": [{
+                        "op": "count",
+                        "as": "number_of_countries"
+                    }],
+                    "groupby": ["Official_language", "region"]
                 }
-            }, 
-            {
-                "filter": "datum.Ladder_score > 6.6"
-            }, 
-            {
-                "filter": "datum.Official_language !== null && datum.Official_language !== 'None'"
-            },
-            {
-                "aggregate": [{
-                    "op": "count",
-                    "as": "number_of_countries"
-                }],
-                "groupby": ["Official_language"]
-            }],
+            ],
             "mark": "bar",
             "encoding": {
                 "color": {
-                    "field": "Official_language",
+                    "field": "region",
                     "type": "nominal",
-                    "title": "Language",
-                    "scale": {"range": ["#FFC0CB"]}, 
-                    "legend": null
+                    "title": "Region" 
                 },
                 "y": {
                     "field": "Official_language",
@@ -67,7 +78,12 @@
                     "field": "number_of_countries",
                     "type": "quantitative",
                     "title": "Number of Countries"
-                }
+                },
+                "tooltip": [
+                    {"field": "region", "title": "Region"},
+                    {"field": "Official_language", "title": "Language"},
+                    {"field": "number_of_countries", "title": "Number of Countries"}
+                ]
             },
             "title": "Most Spoken Languages in Countries with a Score > 6.6"
         };

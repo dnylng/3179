@@ -36,7 +36,12 @@ const baseSpec = {
             "legend": {
                 "title": "Ladder Score"
             }
-        }
+        },
+        "tooltip": [
+            {"field": "Country_name", "type": "nominal", "title": "Country"},
+            {"field": "Ladder_score", "type": "quantitative", "title": "Ladder Score"},
+            {"field": "region", "type": "nominal", "title": "Region"}
+        ]     
     },
     "transform": [
         {
